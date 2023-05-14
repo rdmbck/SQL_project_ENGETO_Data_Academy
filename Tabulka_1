@@ -3,7 +3,6 @@
  * "5958" - kod pro hrubou mzdu 
  */
 
-
 CREATE OR REPLACE TABLE t_rdm_bck_project_SQL_primary_final AS    
 	SELECT 	cp.payroll_year,
 			cp.industry_branch_code,
