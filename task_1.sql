@@ -7,11 +7,11 @@
 
 WITH year_comparsion AS (
 SELECT 	t1.payroll_year,
-		t1.industry_branch_code,
-		t1.industry_branch_name,
-		t1.average_industry_wage,
-		t2.average_industry_wage AS average_industry_wage_last_year,
-		round((t1.average_industry_wage - t2.average_industry_wage) / t2.average_industry_wage * 100, 1) AS wage_change
+	t1.industry_branch_code,
+	t1.industry_branch_name,
+	t1.average_industry_wage,
+	t2.average_industry_wage AS average_industry_wage_last_year,
+	round((t1.average_industry_wage - t2.average_industry_wage) / t2.average_industry_wage * 100, 1) AS wage_change
 FROM t_rdm_bck_project_sql_primary_final AS t1
 JOIN t_rdm_bck_project_sql_primary_final AS t2
 	ON T1.industry_branch_code = T2.industry_branch_code 
@@ -29,11 +29,11 @@ WHERE wage_change < 0
 
 WITH year_comparsion AS (
 SELECT 	t1.payroll_year,
-		t1.industry_branch_code,
-		t1.industry_branch_name,
-		t1.average_industry_wage,
-		t2.average_industry_wage AS average_industry_wage_last_year,
-		round((t1.average_industry_wage - t2.average_industry_wage) / t2.average_industry_wage * 100, 1) AS wage_change
+	t1.industry_branch_code,
+	t1.industry_branch_name,
+	t1.average_industry_wage,
+	t2.average_industry_wage AS average_industry_wage_last_year,
+	round((t1.average_industry_wage - t2.average_industry_wage) / t2.average_industry_wage * 100, 1) AS wage_change
 FROM t_rdm_bck_project_sql_primary_final AS t1
 JOIN t_rdm_bck_project_sql_primary_final AS t2
 	ON T1.industry_branch_code = T2.industry_branch_code 
