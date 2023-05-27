@@ -4,7 +4,15 @@
  */
 
 CREATE OR REPLACE TABLE t_rdm_bck_project_SQL_primary_final AS    
-SELECT * 
+SELECT 	t_payroll.payroll_year,
+		t_payroll.industry_branch_code,
+		t_payroll.industry_branch_name,
+		t_payroll.average_industry_wage,
+		t_price.`year`,
+		t_price.average_price,
+		t_price.food_code,
+		t_price.food_name,
+		t_GDP.gdp
 FROM (
 	SELECT 	
 		cp.payroll_year,
@@ -30,3 +38,13 @@ LEFT JOIN (
 	GROUP BY `year`, cpc.code, cpc.name  
 ) t_price
 ON t_payroll.payroll_year = t_price.`year`
+LEFT JOIN (	
+SELECT 
+	`year`,
+	gdp
+FROM economies e 
+WHERE country = 'czech republic'
+ORDER BY `year`
+) t_GDP
+ON t_GDP.`year` = t_payroll.payroll_year
+;
