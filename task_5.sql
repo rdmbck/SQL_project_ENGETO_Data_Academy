@@ -21,6 +21,6 @@ SELECT
 	round((gdp - lag(gdp) OVER (ORDER BY payroll_year)) / lag(gdp) OVER (ORDER BY payroll_year) * 100, 1) AS YoY_gdp_change
 FROM t1
 )
-SELECT 
-	*
+SELECT *
 FROM t2
+;
