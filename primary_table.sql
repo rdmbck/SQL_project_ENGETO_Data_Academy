@@ -2,7 +2,6 @@
  * vytvoreni primarni tabulky
  */
 
-
 CREATE OR REPLACE TABLE t_rdm_bck_project_SQL_primary_final AS    
 SELECT 	t_payroll.payroll_year,
 		t_payroll.industry_branch_code,
