@@ -11,10 +11,12 @@ WHERE food_code = "114201" OR food_code = "111301"
 GROUP BY `year`, food_code, industry_branch_name  
 )
 SELECT 	
-	*,
+	payroll_year,
+	average_price,
+	food_code,
+	food_name,
 	round((average_industry_wage / average_price), 0) AS food_quantity
 FROM quantity_of_food
 WHERE `year` = 2006 OR `year` = 2018 
-GROUP BY `year`, food_code, industry_branch_name 
-ORDER BY food_name, `year`
+GROUP BY payroll_year , food_code 
 ;
