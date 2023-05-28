@@ -1,6 +1,8 @@
 /*
  * Rostou v průběhu let mzdy ve všech odvětvích, nebo v některých klesají?
  * pomoci WITH pripojim totoznou tabulku s rokem +1 a vytvorim sloupec s rozdilem mezd, nasledne vyberu jen radky, ve kterych byl mezirocni rozdil mensi nez 0
+ *
+ * Discord: Radim B. #9021
  */
 
 -- zobrazi pouze nazvy odvetvi, ve kterych mezirocne mzdy i klesaly 
