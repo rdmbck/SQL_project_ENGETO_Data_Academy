@@ -21,7 +21,7 @@ SELECT
 FROM czechia_payroll cp
 LEFT JOIN czechia_payroll_industry_branch cpib -- pripojeni nazvu odvetvi
 	ON cp.industry_branch_code = cpib.code 
-WHERE value_type_code = "5958" 
+WHERE value_type_code = 5958
 GROUP BY payroll_year, industry_branch_code 
 ORDER BY payroll_year
 ) t_payroll
