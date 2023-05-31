@@ -17,6 +17,6 @@ SELECT
 	food_name,
 	round((average_industry_wage / average_price), 0) AS food_quantity
 FROM quantity_of_food
-WHERE `year` = IN (2006, 2018)
+WHERE `year` IN (2006, 2018)
 GROUP BY payroll_year , food_code 
 ;
